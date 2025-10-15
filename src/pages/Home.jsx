@@ -148,23 +148,23 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-[#040611] via-[#0D1117] to-[#020308]">
       {/* Top Navigation Bar */}
       <div className="bg-[#18181B]/80 backdrop-blur-xl border-b border-[#2C2C2F] sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#bff47b] to-[#8fbe5b] flex items-center justify-center shadow-lg shadow-[#bff47b]/50">
-                <Trophy className="w-6 h-6 text-[#0A0E27]" />
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#bff47b] to-[#8fbe5b] flex items-center justify-center shadow-lg shadow-[#bff47b]/50">
+                <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-[#0A0E27]" />
               </div>
               <div>
-                <h1 className="text-xl font-black text-white tracking-tight">
+                <h1 className="text-base sm:text-xl font-black text-white tracking-tight">
                   Gerovski Sportski Dan
                 </h1>
                 <p className="text-xs text-[#A1A1AA]">2026 Championship</p>
               </div>
             </div>
             {liveCount > 0 && (
-              <div className="flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500/40 rounded-full animate-pulse">
+              <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-red-500/20 border border-red-500/40 rounded-full animate-pulse">
                 <div className="w-2 h-2 rounded-full bg-red-500" />
-                <span className="text-sm font-bold text-red-400">
+                <span className="text-xs sm:text-sm font-bold text-red-400">
                   {liveCount} LIVE
                 </span>
               </div>
@@ -173,7 +173,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex max-w-7xl mx-auto px-6 py-6 gap-6">
+      <div className="flex max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6 gap-4 sm:gap-6">
         {/* LIJEVI SIDEBAR */}
         <nav className="w-64 hidden lg:block">
           <div className="sticky top-24 space-y-4">
@@ -248,21 +248,21 @@ export default function Home() {
         </nav>
 
         {/* SREDIŠNJI SADRŽAJ */}
-        <main className="flex-1 space-y-6">
+        <main className="flex-1 space-y-4 sm:space-y-6">
           {/* Hero Banner */}
-          <div className="relative overflow-hidden bg-gradient-to-r from-[#bff47b] via-[#a8db6a] to-[#8fbe5b] rounded-2xl p-8 shadow-2xl">
+          <div className="relative overflow-hidden bg-gradient-to-r from-[#bff47b] via-[#a8db6a] to-[#8fbe5b] rounded-xl sm:rounded-2xl p-5 sm:p-8 shadow-2xl">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-20" />
-            <div className="relative z-10 mb-5">
-              <div className="flex items-center gap-2 mb-3">
-                <Trophy size={28} className="text-[#0A0E27]" />
-                <span className="px-3 py-1 bg-[#0A0E27]/20 backdrop-blur-sm rounded-full text-xs font-bold text-[#0A0E27]">
+            <div className="relative z-10 mb-3 sm:mb-5">
+              <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                <Trophy size={24} className="sm:size-7 text-[#0A0E27]" />
+                <span className="px-2 sm:px-3 py-1 bg-[#0A0E27]/20 backdrop-blur-sm rounded-full text-xs font-bold text-[#0A0E27]">
                   2026
                 </span>
               </div>
-              <h2 className="text-3xl font-black mb-2 text-[#0A0E27]">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-black mb-2 text-[#0A0E27]">
                 Dobrodošli na 12. Gerovski Sportski Dan!
               </h2>
-              <p className="text-[#0A0E27]/80 mb-6 max-w-xl">
+              <p className="text-sm sm:text-base text-[#0A0E27]/80 mb-4 sm:mb-6 max-w-xl">
                 Pratite rezultate uživo, statistike i sve najvažnije trenutke sa
                 terena.
               </p>
@@ -270,13 +270,13 @@ export default function Home() {
           </div>
 
           {/* Section Header */}
-          <div className="flex justify-between items-center">
-            <h3 className="text-2xl font-black text-white flex items-center gap-2">
-              <Clock size={24} className="text-[#bff47b]" />
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-0">
+            <h3 className="text-xl sm:text-2xl font-black text-white flex items-center gap-2">
+              <Clock size={20} className="sm:size-6 text-[#bff47b]" />
               Utakmice uživo
             </h3>
-            <span className="text-sm text-[#A1A1AA] flex items-center gap-2">
-              <Calendar size={16} />
+            <span className="text-xs sm:text-sm text-[#A1A1AA] flex items-center gap-2">
+              <Calendar size={14} className="sm:size-4" />
               {new Date().toLocaleDateString("hr-HR", {
                 day: "2-digit",
                 month: "long",
@@ -316,7 +316,7 @@ export default function Home() {
                 <Link
                   key={m.id}
                   to={target}
-                  className={`group relative overflow-hidden bg-gradient-to-br from-[#18181B] to-[#0D1117] rounded-2xl transition-all duration-300 cursor-pointer border ${
+                  className={`group relative overflow-hidden bg-gradient-to-br from-[#18181B] to-[#0D1117] rounded-xl sm:rounded-2xl transition-all duration-300 cursor-pointer border ${
                     isActive
                       ? "border-[#bff47b] shadow-[0_0_30px_rgba(191,244,123,0.3)] scale-[1.02]"
                       : "border-[#2C2C2F] hover:border-[#bff47b]/50 hover:scale-[1.01]"
@@ -327,9 +327,9 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-r from-[#bff47b]/5 to-transparent" />
                   )}
 
-                  {/* DODAJ PADDING OVDJE */}
-                  <div className="relative z-10 p-5">
-                    <div className="flex items-center gap-4">
+                  <div className="relative z-10 p-3 sm:p-5">
+                    {/* DESKTOP LAYOUT */}
+                    <div className="hidden sm:flex items-center gap-4">
                       {/* Status/Time Badge - FIKSNA ŠIRINA */}
                       <div className="w-[100px] flex-shrink-0">
                         {isRunning ? (
@@ -424,15 +424,102 @@ export default function Home() {
                         />
                       </div>
                     </div>
+
+                    {/* MOBILE LAYOUT */}
+                    <div className="sm:hidden space-y-3">
+                      {/* Status Badge */}
+                      <div className="flex items-center justify-between">
+                        <div>
+                          {isRunning ? (
+                            <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-red-500/20 border border-red-500/40 animate-pulse">
+                              <div className="w-1.5 h-1.5 rounded-full bg-red-500" />
+                              <span className="text-red-400 text-xs font-bold">
+                                LIVE
+                              </span>
+                            </div>
+                          ) : isPaused ? (
+                            <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-amber-500/20 border border-amber-500/40">
+                              <Pause size={12} className="text-amber-300" />
+                              <span className="text-amber-300 text-xs font-bold">
+                                PAUZA
+                              </span>
+                            </div>
+                          ) : isFinished ? (
+                            <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-green-500/20 border border-green-500/40">
+                              <CheckCircle2 size={12} className="text-green-400" />
+                              <span className="text-green-400 text-xs font-bold">
+                                GOTOVO
+                              </span>
+                            </div>
+                          ) : (
+                            <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-blue-500/20 border border-blue-500/40">
+                              <Clock size={12} className="text-blue-400" />
+                              <span className="text-blue-400 text-xs font-bold font-mono">
+                                {m.start_time
+                                  ? new Date(m.start_time).toLocaleTimeString(
+                                      "hr-HR",
+                                      { hour: "2-digit", minute: "2-digit" }
+                                    )
+                                  : "–"}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                        <ChevronRight
+                          className={`w-4 h-4 text-[#666] ${
+                            isActive ? "text-[#bff47b]" : ""
+                          }`}
+                        />
+                      </div>
+
+                      {/* Teams and Score */}
+                      <div className="flex items-center justify-between gap-3">
+                        <div className="flex-1 min-w-0">
+                          <p className="text-white font-bold text-sm truncate">
+                            {m.team_a_name}
+                          </p>
+                        </div>
+                        
+                        <div className="text-center px-3">
+                          {isActive ? (
+                            <div className="flex flex-col items-center">
+                              <div className="text-2xl font-black text-[#bff47b] whitespace-nowrap">
+                                {displayScore}
+                              </div>
+                              <div className="flex items-center gap-1 text-xs mt-0.5">
+                                <Clock size={10} className="text-[#bff47b]" />
+                                <span className="font-mono font-bold text-[#bff47b]">
+                                  {remainingStr}
+                                </span>
+                              </div>
+                            </div>
+                          ) : (
+                            <div
+                              className={`text-2xl font-black whitespace-nowrap ${
+                                isFinished ? "text-[#bff47b]" : "text-[#A1A1AA]"
+                              }`}
+                            >
+                              {displayScore}
+                            </div>
+                          )}
+                        </div>
+
+                        <div className="flex-1 min-w-0">
+                          <p className="text-white font-bold text-sm truncate text-right">
+                            {m.team_b_name}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </Link>
               );
             })}
 
             {matches.length === 0 && (
-              <div className="text-center py-16 bg-gradient-to-br from-[#18181B] to-[#0D1117] rounded-2xl border border-[#2C2C2F]">
-                <Calendar size={48} className="mx-auto mb-4 text-[#A1A1AA]" />
-                <p className="text-[#A1A1AA] text-lg">
+              <div className="text-center py-12 sm:py-16 bg-gradient-to-br from-[#18181B] to-[#0D1117] rounded-xl sm:rounded-2xl border border-[#2C2C2F]">
+                <Calendar size={40} className="sm:size-12 mx-auto mb-3 sm:mb-4 text-[#A1A1AA]" />
+                <p className="text-[#A1A1AA] text-base sm:text-lg">
                   Trenutno nema dostupnih utakmica.
                 </p>
               </div>

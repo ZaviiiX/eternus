@@ -39,6 +39,11 @@ export default function Login() {
             className="w-full border border-[#1F1F23] bg-[#18181B] text-[#FFFFFF] rounded mt-1 p-2 focus:outline-none focus:border-[#bff47b]"
             value={form.email}
             onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+            onTouchStart={(e) => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
+            inputMode="email"
+            autoComplete="email"
+            aria-label="Email"
             required
           />
         </div>
@@ -50,6 +55,11 @@ export default function Login() {
             className="w-full border border-[#1F1F23] bg-[#18181B] text-[#FFFFFF] rounded mt-1 p-2 focus:outline-none focus:border-[#bff47b]"
             value={form.password}
             onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
+            onTouchStart={(e) => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
+            inputMode="text"
+            autoComplete="current-password"
+            aria-label="Lozinka"
             required
           />
         </div>
