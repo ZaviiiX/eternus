@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* Global dark mode UI kit styles for all pages/components */
+:root {
+  --primary-bg: #0E0E10;
+  --secondary-bg: #18181B;
+  --tertiary-bg: #1F1F23;
+  --primary-text: #FFFFFF;
+  --secondary-text: #A1A1AA;
+  --accent-1: #bff47b;
+  --accent-2: #8fbe5b;
+  --warning: #FF3B3B;
+  --inactive: #52525B;
+  --font-primary: 'Inter', sans-serif;
+  --border-radius: 12px;
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+html, body, #root {
+  background: var(--primary-bg) !important;
+  color: var(--primary-text);
+  font-family: var(--font-primary);
+}
+body > div, main, .main-bg {
+  background: var(--primary-bg) !important;
+}
+.card {
+  background: var(--secondary-bg);
+  border-radius: var(--border-radius);
+  padding: 16px 20px;
+  color: var(--primary-text);
+  transition: 0.2s ease;
+}
+.card:hover {
+  background: var(--tertiary-bg);
+  border: 1px solid var(--accent-1);
+}
+button, .btn {
+  border: 1px solid var(--accent-1);
+  background: transparent;
+  color: var(--accent-1);
+  border-radius: 10px;
+  padding: 8px 16px;
+  transition: 0.2s ease;
+}
+button:hover, .btn:hover {
+  background: var(--accent-1);
+  color: var(--primary-bg);
+}
+table {
+  background: var(--secondary-bg);
+  border-radius: var(--border-radius);
+  color: var(--primary-text);
+}
+th, td {
+  padding: 12px;
+}
+th {
+  color: var(--secondary-text);
+}
+input, select {
+  background: var(--secondary-bg);
+  color: var(--primary-text);
+  border-radius: 10px;
+  border: 1px solid var(--tertiary-bg);
+  padding: 8px;
+}
+input:focus, select:focus {
+  outline: 1px solid var(--accent-1);
+}
