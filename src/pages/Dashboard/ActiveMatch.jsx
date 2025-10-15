@@ -342,8 +342,8 @@ export default function ActiveMatch() {
       <div className="bg-[#18181B]/50 backdrop-blur-xl border-b border-[#2C2C2F] sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link 
-              to="/dashboard/schedule" 
+            <Link
+              to={profile ? "/dashboard/schedule" : "/"}
               className="flex items-center gap-2 text-[#A1A1AA] hover:text-white transition-colors group"
             >
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />

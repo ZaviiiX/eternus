@@ -484,29 +484,31 @@ export default function Home() {
                       viewBox="0 0 2048 2048"
                     >
                       <path
-                        fill="#currentColor"
+                        fill="currentColor"
                         d="M0 1408v-384h384v384H0zm128-256v128h128v-128H128zM0 896V512h384v384H0zm128-256v128h128V640H128zM0 384V0h384v384H0zm128-256v128h128V128H128zm512 640V640h1152v128H640zm896 384v128H640v-128h896zM640 128h1408v128H640V128zM0 1920v-384h384v384H0zm128-256v128h128v-128H128zm512 128v-128h1152v128H640z"
                       />
                     </svg>
                   </span>
                 </div>
-                <div
-                  className={`text-sm font-bold ${
-                    selectedSportMobile === null
-                      ? "text-[#0A0E27]"
-                      : "text-white"
-                  }`}
-                >
-                  Sve utakmice
-                </div>
-                <div
-                  className={`text-xs mt-1 ${
-                    selectedSportMobile === null
-                      ? "text-[#0A0E27]/70"
-                      : "text-[#A1A1AA]"
-                  }`}
-                >
-                  {matches.length} utakmica
+                <div className="min-w-0">
+                  <div
+                    className={`text-sm font-bold truncate ${
+                      selectedSportMobile === null
+                        ? "text-white"
+                        : "text-white"
+                    }`}
+                  >
+                    Sve utakmice
+                  </div>
+                  <div
+                    className={`text-xs mt-1 ${
+                      selectedSportMobile === null
+                        ? "text-[#A1A1AA]"
+                        : "text-[#A1A1AA]"
+                    }`}
+                  >
+                    {matches.length} utakmica
+                  </div>
                 </div>
               </button>
 
@@ -518,7 +520,7 @@ export default function Home() {
                     key={s.id}
                     onClick={() => setSelectedSportMobile(s.id)}
                     className={`p-4 rounded-xl transition-all duration-300 ${
-                      isSelected
+                      selectedSportMobile === s.id
                         ? "bg-gradient-to-r from-[#bff47b] to-[#8fbe5b] shadow-lg shadow-[#bff47b]/30"
                         : "bg-gradient-to-br from-[#18181B] to-[#0D1117] border border-[#2C2C2F] hover:border-[#bff47b]/50"
                     }`}
@@ -526,19 +528,25 @@ export default function Home() {
                     <div className="text-3xl mb-2">
                       {renderSportIcon(s.name)}
                     </div>
-                    <div
-                      className={`text-sm font-bold truncate ${
-                        isSelected ? "text-[#0A0E27]" : "text-white"
-                      }`}
-                    >
-                      {s.name}
-                    </div>
-                    <div
-                      className={`text-xs mt-1 ${
-                        isSelected ? "text-[#0A0E27]/70" : "text-[#A1A1AA]"
-                      }`}
-                    >
-                      {sportMatches.length} utakmica
+                    <div className="min-w-0">
+                      <div
+                        className={`text-sm font-bold truncate ${
+                          selectedSportMobile === s.id
+                            ? "text-[#0A0E27]"
+                            : "text-white"
+                        }`}
+                      >
+                        {s.name}
+                      </div>
+                      <div
+                        className={`text-xs mt-1 ${
+                          selectedSportMobile === s.id
+                            ? "text-[#0A0E27]/70"
+                            : "text-[#A1A1AA]"
+                        }`}
+                      >
+                        {sportMatches.length} utakmica
+                      </div>
                     </div>
                   </button>
                 );
